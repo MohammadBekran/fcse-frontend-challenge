@@ -1,6 +1,6 @@
 import Login from "@/features/auth/components/login";
 
-const LoginPage = () => {
+const LoginPage: React.FC = () => {
   return <Login />;
 };
 

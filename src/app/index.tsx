@@ -4,14 +4,17 @@ import ApolloClientProvider from "@/components/partials/providers/apollo-client-
 import { Toaster } from "@/components/ui/sonner";
 import { AUTH_ROUTER } from "@/core/configs/router/auth.router";
 import { PRIVATE_ROUTER } from "@/core/configs/router/private.router";
-import { getItem } from "@/core/services/common/storage.services";
+import { useAuth } from "@/features/auth/core/hooks";
 
 const App = () => {
-  const loggedIn = getItem("token");
+  const isAuthenticated = useAuth((state) => state.isAuthenticated);
 
   return (
     <ApolloClientProvider>
-      <RouterProvider router={loggedIn ? PRIVATE_ROUTER : AUTH_ROUTER} />
+      <RouterProvider
+        key={isAuthenticated ? "private" : "auth"}
+        router={isAuthenticated ? PRIVATE_ROUTER : AUTH_ROUTER}
+      />
       <Toaster />
     </ApolloClientProvider>
   );

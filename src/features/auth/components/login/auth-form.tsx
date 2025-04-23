@@ -1,22 +1,23 @@
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
 import { ApolloError, useMutation } from "@apollo/client";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router";
 
-import type { TLoginFormData } from "@/features/auth/core/types";
-import { loginFormSchema } from "@/features/auth/core/validations";
-import { LOGIN_MUTATION } from "@/features/auth/core/graphql/mutations";
 import {
   EAuthToastLoadingMessageIds,
   EAuthToastMessages,
 } from "@/features/auth/core/enums";
+import { LOGIN_MUTATION } from "@/features/auth/core/graphql/mutations";
+import { useAuth } from "@/features/auth/core/hooks";
+import type { TLoginFormData } from "@/features/auth/core/types";
+import { loginFormSchema } from "@/features/auth/core/validations";
 
-import { Form } from "@/components/ui/form";
-import { Button } from "@/components/ui/button";
-import { toast } from "@/lib/utils";
-import { TGraphqlErrorExtension } from "@/core/types";
-import { setItem } from "@/core/services/common/storage.services";
 import CustomField from "@/components/custom-field";
+import { Button } from "@/components/ui/button";
+import { Form } from "@/components/ui/form";
+import { ERoutes } from "@/core/enums";
+import type { TGraphqlErrorExtension } from "@/core/types";
+import { toast } from "@/lib/utils";
 
 const AuthForm: React.FC = () => {
   const navigate = useNavigate();
@@ -27,8 +28,8 @@ const AuthForm: React.FC = () => {
       password: "",
     },
   });
-
   const [login, { loading }] = useMutation(LOGIN_MUTATION);
+  const authLogin = useAuth((state) => state.login);
 
   const onSubmit = async (values: TLoginFormData) => {
     try {
@@ -46,8 +47,10 @@ const AuthForm: React.FC = () => {
       if (jwt) {
         toast.success("Logged in successfully");
 
-        setItem("token", jwt);
-        navigate("/panel");
+        authLogin(jwt);
+
+        navigate(ERoutes.Dashboard);
+        navigate(0);
       }
     } catch (error) {
       if (error instanceof ApolloError) {
