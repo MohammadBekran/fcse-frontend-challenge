@@ -1,10 +1,13 @@
 import { useQuery } from "@apollo/client";
 
-import { USER_QUERY } from "@/features/dashboard/core/queries";
+import { useAuthRedirect } from "@/core/hooks";
 import InformationBox from "@/features/dashboard/components/information-box";
 import LogoutButton from "@/features/dashboard/components/logout-button";
+import { USER_QUERY } from "@/features/dashboard/core/queries";
 
 const Dashboard: React.FC = () => {
+  useAuthRedirect(false);
+
   const { data } = useQuery(USER_QUERY);
 
   return (

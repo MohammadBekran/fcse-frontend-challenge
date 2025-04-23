@@ -47,7 +47,7 @@ const CustomField = <T extends FieldValues>({
             </FormLabel>
             <FormControl>
               {type && (
-                <>
+                <div>
                   <Input
                     placeholder={placeholder}
                     type={
@@ -66,7 +66,7 @@ const CustomField = <T extends FieldValues>({
                     ) : (
                       <FaEye {...eyeIconProperties} />
                     ))}
-                </>
+                </div>
               )}
             </FormControl>
           </div>

@@ -14,7 +14,6 @@ const LogoutButton = () => {
     logout();
 
     navigate(ERoutes.Login, { replace: true });
-    navigate(0);
   };
 
   return (

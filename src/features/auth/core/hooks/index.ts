@@ -1,10 +1,6 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
-import {
-  getItem,
-  removeItem,
-  setItem,
-} from "@/core/services/common/storage.services";
+import { removeItem, setItem } from "@/core/services/common/storage.services";
 
 interface IAuthState {
   isAuthenticated: boolean;

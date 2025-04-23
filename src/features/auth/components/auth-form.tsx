@@ -48,9 +48,7 @@ const AuthForm: React.FC = () => {
         toast.success("Logged in successfully");
 
         authLogin(jwt);
-
         navigate(ERoutes.Dashboard);
-        navigate(0);
       }
     } catch (error) {
       if (error instanceof ApolloError) {
