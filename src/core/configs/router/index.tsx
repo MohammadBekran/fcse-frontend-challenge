@@ -1,15 +1,20 @@
 import { createBrowserRouter } from "react-router";
 
+import AuthGuard from "@/components/auth-guard";
 import AuthLayout from "@/components/partials/layouts/auth-layout";
 import LoginPage from "@/pages/auth/login";
 import DashboardPage from "@/pages/dashboard";
-import NotFoundPage from "@/pages/not-found";
 import ErrorPage from "@/pages/error";
+import NotFoundPage from "@/pages/not-found";
 
 export const router = createBrowserRouter([
   {
     path: "/login",
-    element: <AuthLayout />,
+    element: (
+      <AuthGuard requireAuth={false}>
+        <AuthLayout />
+      </AuthGuard>
+    ),
     errorElement: <ErrorPage />,
     children: [
       {
@@ -20,7 +25,11 @@ export const router = createBrowserRouter([
   },
   {
     path: "/dashboard",
-    element: <DashboardPage />,
+    element: (
+      <AuthGuard>
+        <DashboardPage />
+      </AuthGuard>
+    ),
     errorElement: <ErrorPage />,
   },
   {
