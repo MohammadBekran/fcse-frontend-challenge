@@ -1,54 +1,101 @@
-# React + TypeScript + Vite
+# Frontend Developer Trial Task
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a frontend application built for the trial task using React, TypeScript, GraphQL, Tailwind CSS, Shadcn UI, and Vite.
 
-Currently, two official plugins are available:
+## 🚀 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🔗 [Live URL](https://fcse-frontend-challenge.vercel.app/)
 
-## Expanding the ESLint configuration
+## 🌐 Supported Languages
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **English** (en)
+- **Français** (fr)
+- **Deutsch** (de)
+- **日本語** (ja)
+- **العربية** (ar)
+- **हिन्दी** (hi)
+- **Русский** (ru)
+- **한국어** (ko)
+- **Português (BR)** (pt)
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 🧪 Features
+
+- 🔐 Login with validation
+- 👤 Dashboard to show account details (first name & last name)
+- 🔄 Logout
+- 🌍 Localization with i18next
+- 🧭 SPA navigation using React Router
+- 📡 Apollo GraphQL integration
+- 🧪 Unit tests with Vitest + React Testing Library
+- 💅 Clean and modern UI
+- ⚠️ Toast notifications for feedback
+
+## ⚙️ Getting Started
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/MohammadBekran/fcse-frontend-challenge.git
+cd fcse-frontend-challenge
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 2. Install Dependencies
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```bash
+pnpm install
+# or
+npm install
 ```
+
+## 3. Set Environment Variables
+
+Create a .env file in the root:
+
+```bash
+VITE_GRAPHQL_URI=https://cms.trial-task.k8s.ext.fcse.io/graphql
+```
+
+## 4. Run the Development Server
+
+```bash
+pnpm run dev
+# or
+npm run dev
+```
+
+Visit http://localhost:5173 in your browser.
+
+## 5. Run Tests
+
+```bash
+pnpm vitest run
+# or
+npm vitest run
+```
+
+## 🛠 Technologies Used
+
+- React
+- TypeScript
+- GraphQL
+- Apollo Client
+- i18next
+- Tailwind CSS
+- Shadcn UI
+- React Hook Form
+- Zod
+- Vitest
+
+## 📂 Deployment
+
+The app is deployed using Vercel.  
+To set up your own deployment:
+
+1. Push the code to GitHub.
+2. Link your GitHub repo in Vercel.
+3. Add the required environment variables in the Vercel dashboard.
+
+## 👤 Trial User Credentials
+
+- Email: test@freshcells.de
+- Password: KTKwXm2grV4wHzW
