@@ -1,21 +1,25 @@
 {
   "logoText": "Frontend",
   "auth": {
-    "title": "Desafio de Tarefa Frontend",
+    "title": "Desafio de Tarefas de Frontend",
     "description": "Usando React, TypeScript, Tailwind CSS, Shadcn, GraphQL",
     "signIn": "Entrar",
-    "email": "Email",
-    "emailPlaceholder": "Seu email",
+    "email": "E-mail",
+    "emailPlaceholder": "Seu e-mail",
+    "emailInvalid": "Endereço de e-mail inválido",
+    "emailRequired": "E-mail é obrigatório",
     "password": "Senha",
     "passwordPlaceholder": "Sua senha",
-    "login": "Login",
+    "passwordMinLength": "A senha deve ter pelo menos 6 caracteres",
+    "passwordRequired": "Senha é obrigatória",
+    "login": "Entrar",
     "loggingIn": "Entrando...",
-    "loginSuccess": "Login realizado com sucesso",
+    "loginSuccess": "Logado com sucesso",
     "unexpectedError": "Algo deu errado. Tente novamente"
   },
   "dashboard": {
     "title": "Painel",
-    "firstName": "Nome:",
-    "lastName": "Sobrenome:"
+    "firstName": "Primeiro nome:",
+    "lastName": "Último nome:"
   }
 }

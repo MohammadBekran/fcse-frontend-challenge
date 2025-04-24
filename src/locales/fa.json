@@ -1,0 +1,25 @@
+{
+  "logoText": "فرانت‌اند",
+  "auth": {
+    "title": "چالش وظایف فرانت‌اند",
+    "description": "با استفاده از React، TypeScript، Tailwind CSS، Shadcn، GraphQL",
+    "signIn": "ورود",
+    "email": "ایمیل",
+    "emailPlaceholder": "ایمیل شما",
+    "emailInvalid": "آدرس ایمیل معتبر نیست",
+    "emailRequired": "ایمیل الزامی است",
+    "password": "رمز عبور",
+    "passwordPlaceholder": "رمز عبور شما",
+    "passwordMinLength": "رمز عبور باید حداقل 6 کاراکتر باشد",
+    "passwordRequired": "رمز عبور الزامی است",
+    "login": "ورود",
+    "loggingIn": "در حال ورود...",
+    "loginSuccess": "با موفقیت وارد شدید",
+    "unexpectedError": "مشکلی پیش آمده است. لطفاً دوباره تلاش کنید"
+  },
+  "dashboard": {
+    "title": "داشبورد",
+    "firstName": "نام:",
+    "lastName": "نام خانوادگی:"
+  }
+}

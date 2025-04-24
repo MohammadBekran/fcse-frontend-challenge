@@ -11,7 +11,11 @@
     "login": "Connexion",
     "loggingIn": "Connexion en cours...",
     "loginSuccess": "Connecté avec succès",
-    "unexpectedError": "Une erreur est survenue. Veuillez réessayer"
+    "unexpectedError": "Une erreur est survenue. Veuillez réessayer",
+    "emailRequired": "L'email est requis",
+    "emailInvalid": "Adresse email invalide",
+    "passwordRequired": "Le mot de passe est requis",
+    "passwordMinLength": "Le mot de passe doit comporter au moins 6 caractères"
   },
   "dashboard": {
     "title": "Tableau de Bord",

@@ -1,21 +1,25 @@
 {
-  "logoText": "फ्रंटएंड",
+  "logoText": "फ्रंटेंड",
   "auth": {
-    "title": "फ्रंटएंड टास्क चैलेंज",
-    "description": "React, TypeScript, Tailwind CSS, Shadcn, और GraphQL का उपयोग करके",
+    "title": "फ्रंटेंड कार्य चुनौती",
+    "description": "React, TypeScript, Tailwind CSS, Shadcn, GraphQL का उपयोग करके",
     "signIn": "साइन इन करें",
     "email": "ईमेल",
-    "emailPlaceholder": "अपना ईमेल दर्ज करें",
+    "emailPlaceholder": "आपका ईमेल",
+    "emailInvalid": "अमान्य ईमेल पता",
+    "emailRequired": "ईमेल आवश्यक है",
     "password": "पासवर्ड",
-    "passwordPlaceholder": "अपना पासवर्ड दर्ज करें",
-    "login": "लॉगिन करें",
-    "loggingIn": "लॉगिन किया जा रहा है...",
-    "loginSuccess": "सफलतापूर्वक लॉगिन हो गया",
+    "passwordPlaceholder": "आपका पासवर्ड",
+    "passwordMinLength": "पासवर्ड कम से कम 6 वर्णों का होना चाहिए",
+    "passwordRequired": "पासवर्ड आवश्यक है",
+    "login": "लॉगिन",
+    "loggingIn": "लॉगिन हो रहा है...",
+    "loginSuccess": "सफलतापूर्वक लॉग इन किया गया",
     "unexpectedError": "कुछ गलत हो गया। कृपया पुनः प्रयास करें"
   },
   "dashboard": {
     "title": "डैशबोर्ड",
     "firstName": "पहला नाम:",
-    "lastName": "अंतिम नाम:"
+    "lastName": "आखिरी नाम:"
   }
 }

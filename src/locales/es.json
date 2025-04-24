@@ -1,20 +1,24 @@
 {
   "logoText": "Frontend",
   "auth": {
-    "title": "Desafío de Tarea Frontend",
+    "title": "Reto de tareas de Frontend",
     "description": "Usando React, TypeScript, Tailwind CSS, Shadcn, GraphQL",
-    "signIn": "Iniciar Sesión",
+    "signIn": "Iniciar sesión",
     "email": "Correo electrónico",
     "emailPlaceholder": "Tu correo electrónico",
+    "emailInvalid": "Dirección de correo electrónico no válida",
+    "emailRequired": "El correo electrónico es obligatorio",
     "password": "Contraseña",
     "passwordPlaceholder": "Tu contraseña",
+    "passwordMinLength": "La contraseña debe tener al menos 6 caracteres",
+    "passwordRequired": "La contraseña es obligatoria",
     "login": "Iniciar sesión",
     "loggingIn": "Iniciando sesión...",
-    "loginSuccess": "Inicio de sesión exitoso",
+    "loginSuccess": "Sesión iniciada con éxito",
     "unexpectedError": "Algo salió mal. Por favor, inténtalo de nuevo"
   },
   "dashboard": {
-    "title": "Panel",
+    "title": "Tablero",
     "firstName": "Nombre:",
     "lastName": "Apellido:"
   }

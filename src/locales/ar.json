@@ -1,17 +1,21 @@
 {
   "logoText": "الواجهة الأمامية",
   "auth": {
-    "title": "تحدي مهمة الواجهة الأمامية",
-    "description": "باستخدام React، TypeScript، Tailwind CSS، Shadcn، وGraphQL",
+    "title": "تحدي المهام للواجهة الأمامية",
+    "description": "باستخدام React و TypeScript و Tailwind CSS و Shadcn و GraphQL",
     "signIn": "تسجيل الدخول",
     "email": "البريد الإلكتروني",
     "emailPlaceholder": "بريدك الإلكتروني",
+    "emailInvalid": "عنوان البريد الإلكتروني غير صالح",
+    "emailRequired": "البريد الإلكتروني مطلوب",
     "password": "كلمة المرور",
-    "passwordPlaceholder": "كلمة مرورك",
+    "passwordPlaceholder": "كلمة المرور الخاصة بك",
+    "passwordMinLength": "يجب أن تكون كلمة المرور على الأقل 6 أحرف",
+    "passwordRequired": "كلمة المرور مطلوبة",
     "login": "تسجيل الدخول",
-    "loggingIn": "جارٍ تسجيل الدخول...",
+    "loggingIn": "جاري تسجيل الدخول...",
     "loginSuccess": "تم تسجيل الدخول بنجاح",
-    "unexpectedError": "حدث خطأ ما. الرجاء المحاولة مرة أخرى"
+    "unexpectedError": "حدث خطأ ما. يرجى المحاولة مرة أخرى"
   },
   "dashboard": {
     "title": "لوحة التحكم",

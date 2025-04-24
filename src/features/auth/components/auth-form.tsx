@@ -18,15 +18,15 @@ import { toast } from "@/lib/utils";
 
 const AuthForm: React.FC = () => {
   const navigate = useNavigate();
+  const { t } = useTranslation();
   const form = useForm<TLoginFormData>({
-    resolver: zodResolver(loginFormSchema),
+    resolver: zodResolver(loginFormSchema(t)),
     defaultValues: {
       email: "",
       password: "",
     },
   });
   const [login, { loading }] = useMutation(LOGIN_MUTATION);
-  const { t } = useTranslation();
   const authLogin = useAuth((state) => state.login);
 
   const onSubmit = async (values: TLoginFormData) => {
