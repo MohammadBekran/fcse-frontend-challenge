@@ -1,0 +1,21 @@
+{
+  "logoText": "Frontend",
+  "auth": {
+    "title": "Frontend-Aufgaben Herausforderung",
+    "description": "Verwendet React, TypeScript, Tailwind CSS, Shadcn, GraphQL",
+    "signIn": "Anmelden",
+    "email": "E-Mail",
+    "emailPlaceholder": "Deine E-Mail",
+    "password": "Passwort",
+    "passwordPlaceholder": "Dein Passwort",
+    "login": "Einloggen",
+    "loggingIn": "Einloggen...",
+    "loginSuccess": "Erfolgreich eingeloggt",
+    "unexpectedError": "Etwas ist schief gelaufen. Bitte versuche es erneut"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "firstName": "Vorname:",
+    "lastName": "Nachname:"
+  }
+}

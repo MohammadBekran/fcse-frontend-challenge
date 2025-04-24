@@ -1,3 +1,5 @@
+import { useTranslation } from "react-i18next";
+
 import { cn } from "@/lib/utils";
 
 interface ILogoProps {
@@ -15,6 +17,8 @@ const Logo = ({
   fontSize,
   showText = true,
 }: ILogoProps) => {
+  const { t } = useTranslation();
+
   const logoUrl = white ? "/white-logo.svg" : "/logo.svg";
 
   return (
@@ -27,7 +31,7 @@ const Logo = ({
       style={{ fontSize }}
     >
       <img src={logoUrl} alt="Logo" width={width} height={height} />
-      {showText && "Frontend"}
+      {showText && t("logoText")}
     </div>
   );
 };

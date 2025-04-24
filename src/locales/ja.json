@@ -1,0 +1,21 @@
+{
+  "logoText": "フロントエンド",
+  "auth": {
+    "title": "フロントエンド課題チャレンジ",
+    "description": "React、TypeScript、Tailwind CSS、Shadcn、GraphQLを使用",
+    "signIn": "サインイン",
+    "email": "メールアドレス",
+    "emailPlaceholder": "あなたのメール",
+    "password": "パスワード",
+    "passwordPlaceholder": "あなたのパスワード",
+    "login": "ログイン",
+    "loggingIn": "ログイン中...",
+    "loginSuccess": "ログインに成功しました",
+    "unexpectedError": "エラーが発生しました。もう一度お試しください"
+  },
+  "dashboard": {
+    "title": "ダッシュボード",
+    "firstName": "名：",
+    "lastName": "姓："
+  }
+}

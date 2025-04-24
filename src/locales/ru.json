@@ -1,0 +1,21 @@
+{
+  "logoText": "Фронтенд",
+  "auth": {
+    "title": "Тестовое задание по фронтенду",
+    "description": "Используя React, TypeScript, Tailwind CSS, Shadcn и GraphQL",
+    "signIn": "Войти",
+    "email": "Эл. почта",
+    "emailPlaceholder": "Ваш email",
+    "password": "Пароль",
+    "passwordPlaceholder": "Ваш пароль",
+    "login": "Войти",
+    "loggingIn": "Вход...",
+    "loginSuccess": "Успешный вход",
+    "unexpectedError": "Что-то пошло не так. Попробуйте еще раз"
+  },
+  "dashboard": {
+    "title": "Панель управления",
+    "firstName": "Имя:",
+    "lastName": "Фамилия:"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "logoText": "Frontend",
+  "auth": {
+    "title": "Défi de Tâche Frontend",
+    "description": "Utilisation de React, TypeScript, Tailwind CSS, Shadcn, GraphQL",
+    "signIn": "Se Connecter",
+    "email": "Email",
+    "emailPlaceholder": "Votre email",
+    "password": "Mot de passe",
+    "passwordPlaceholder": "Votre mot de passe",
+    "login": "Connexion",
+    "loggingIn": "Connexion en cours...",
+    "loginSuccess": "Connecté avec succès",
+    "unexpectedError": "Une erreur est survenue. Veuillez réessayer"
+  },
+  "dashboard": {
+    "title": "Tableau de Bord",
+    "firstName": "Prénom :",
+    "lastName": "Nom :"
+  }
+}

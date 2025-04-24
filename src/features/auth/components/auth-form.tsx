@@ -1,12 +1,9 @@
 import { ApolloError, useMutation } from "@apollo/client";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
+import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router";
 
-import {
-  EAuthToastLoadingMessageIds,
-  EAuthToastMessages,
-} from "@/features/auth/core/enums";
 import { LOGIN_MUTATION } from "@/features/auth/core/graphql/mutations";
 import { useAuth } from "@/features/auth/core/hooks";
 import type { TLoginFormData } from "@/features/auth/core/types";
@@ -29,14 +26,11 @@ const AuthForm: React.FC = () => {
     },
   });
   const [login, { loading }] = useMutation(LOGIN_MUTATION);
+  const { t } = useTranslation();
   const authLogin = useAuth((state) => state.login);
 
   const onSubmit = async (values: TLoginFormData) => {
     try {
-      toast.loading(EAuthToastMessages.LoginLoading, {
-        id: EAuthToastLoadingMessageIds.LoginLoading,
-      });
-
       const { email, password } = values;
 
       const { data } = await login({
@@ -45,7 +39,7 @@ const AuthForm: React.FC = () => {
       const jwt = data?.login?.jwt;
 
       if (jwt) {
-        toast.success("Logged in successfully");
+        toast.success(t("auth.loginSuccess"));
 
         authLogin(jwt);
         navigate(ERoutes.Dashboard);
@@ -57,14 +51,12 @@ const AuthForm: React.FC = () => {
 
         const message =
           extensions?.exception.data?.message?.[0]?.messages[0]?.message ??
-          "Something went wrong. Please try again";
+          t("auth.unexpectedError");
 
         toast.error(message);
       } else {
-        toast.error(EAuthToastMessages.UnexpectedError);
+        toast.error(t("auth.unexpectedError"));
       }
-    } finally {
-      toast.dismiss(EAuthToastLoadingMessageIds.LoginLoading);
     }
   };
 
@@ -73,24 +65,24 @@ const AuthForm: React.FC = () => {
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
           <h1 className="text-[34px] font-bold text-center leading-[42px] text-light-100 lg:text-start">
-            Sign In
+            {t("auth.signIn")}
           </h1>
           <CustomField
             name="email"
-            label="Email"
-            placeholder="Your email"
+            label={t("auth.email")}
+            placeholder={t("auth.emailPlaceholder")}
             type="text"
             control={form.control}
           />
           <CustomField
             name="password"
-            label="Password"
-            placeholder="Your password"
+            label={t("auth.password")}
+            placeholder={t("auth.passwordPlaceholder")}
             type="password"
             control={form.control}
           />
           <Button type="submit" disabled={loading} className="w-full button">
-            {loading ? "Logging in ..." : "Login"}
+            {loading ? t("auth.loggingIn") : t("auth.login")}
           </Button>
         </form>
       </Form>
