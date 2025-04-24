@@ -26,9 +26,11 @@ const Dashboard: React.FC = () => {
           />
         </div>
       </div>
-      <div className="flex items-center gap-x-2">
-        <LanguageSwitcher />
-        <LogoutButton />
+      <div>
+        <div className="flex items-center gap-x-2 -mt-[12px]">
+          <LanguageSwitcher />
+          <LogoutButton />
+        </div>
       </div>
     </main>
   );
