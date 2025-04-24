@@ -17,6 +17,7 @@ This is a frontend application built for the trial task using React, TypeScript,
 - **Русский** (ru)
 - **한국어** (ko)
 - **Português (BR)** (pt)
+- **فارسی** (fa)
 
 ## 🧪 Features
 
